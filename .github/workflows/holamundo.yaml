@@ -11,3 +11,11 @@ jobs:
         steps:
             - name: Saludo
               run: echo "Hola Mundo"
+            - name: Fecha y hora
+              run: date
+            - name: Usuario
+              run: whoami
+            - name: Mostrar directorio
+              run: pwd
+            - name: Listar archivos
+              run: ls -la
