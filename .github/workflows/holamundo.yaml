@@ -1,21 +1,18 @@
 name: Hola Mundo
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-    hola_mundo:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Fecha y hora
-              run: date
-            - name: Usuario
-              run: whoami
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - name: Mostrar directorio
-              run: pwd
-            - name: Mostrar variables de entorno
-              run: env
+  hola_mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fecha y hora
+        run: date
+      - name: Usuario
+        run: whoami
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Mostrar directorio
+        run: pwd
+      - name: Mostrar variables de entorno
+        run: env
