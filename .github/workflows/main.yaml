@@ -1,0 +1,14 @@
+name: Main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/build.yaml
+  call-test:
+    needs: call-build
+    uses: ./.github/workflows/test.yaml
+  call-deploy:
+    needs: call-test
+    uses: ./.github/workflows/deploy.yaml
