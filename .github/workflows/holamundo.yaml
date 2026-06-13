@@ -9,13 +9,13 @@ jobs:
     hola_mundo:
         runs-on: ubuntu-latest
         steps:
-            - name: Saludo
-              run: echo "Hola Mundo"
             - name: Fecha y hora
               run: date
             - name: Usuario
               run: whoami
+            - name: Checkout code
+              uses: actions/checkout@v4
             - name: Mostrar directorio
               run: pwd
-            - name: Listar archivos
-              run: ls -la
+            - name: Mostrar variables de entorno
+              run: env
